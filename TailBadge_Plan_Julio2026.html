@@ -199,16 +199,96 @@
   .f-brand { color: var(--white); font-weight: 700; font-size: 13px; }
   .f-meta { color: rgba(255,255,255,.35); font-size: 12px; }
 
-  @media(max-width:768px){
-    nav { padding: 16px 20px; }
-    .hero { padding: 48px 20px 40px; }
-    .hero h1 { font-size: 28px; }
+
+  /* SEGMENTACIÓN */
+  .seg-block { background: var(--white); border-radius: 14px; overflow: hidden; margin-bottom: 14px; }
+  .seg-header { background: var(--navy); padding: 14px 22px; display: flex; align-items: center; gap: 10px; }
+  .seg-header-title { color: var(--white); font-size: 14px; font-weight: 700; }
+  .seg-header-sub { color: rgba(255,255,255,.45); font-size: 12px; }
+  .seg-table { width: 100%; border-collapse: collapse; }
+  .seg-table th { background: rgba(9,66,96,.06); color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 10px 18px; text-align: left; border-bottom: 1px solid var(--gray); }
+  .seg-table td { padding: 12px 18px; font-size: 12px; color: var(--text-soft); border-bottom: 1px solid var(--gray); vertical-align: top; line-height: 1.5; }
+  .seg-table tr:last-child td { border-bottom: none; }
+  .seg-table td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap; font-size: 11px; }
+  .seg-tag { display: inline-block; background: rgba(9,66,96,.07); color: var(--navy); font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 12px; margin: 2px 2px 2px 0; }
+  .seg-tag.green { background: rgba(144,180,53,.12); color: #5a7a1a; }
+  .geo-cols { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+  .geo-col { background: var(--off); border-radius: 10px; padding: 16px 18px; }
+  .geo-col-city { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--green); margin-bottom: 8px; }
+  .geo-col-zones { font-size: 12px; color: var(--text-soft); line-height: 1.6; }
+  .geo-col-zones strong { color: var(--navy); display: block; margin-bottom: 4px; font-size: 11px; }
+
+  /* LEAD MAGNET */
+  .lm-block { background: var(--navy); border-radius: 16px; padding: 36px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .lm-left {}
+  .lm-eyebrow { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+  .lm-title { color: var(--white); font-size: 22px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
+  .lm-desc { color: rgba(255,255,255,.6); font-size: 13px; line-height: 1.65; margin-bottom: 20px; }
+  .lm-steps { display: flex; flex-direction: column; gap: 12px; }
+  .lm-step { display: flex; gap: 14px; align-items: flex-start; }
+  .lm-step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: var(--white); font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .lm-step-text { font-size: 13px; color: rgba(255,255,255,.75); line-height: 1.5; padding-top: 4px; }
+  .lm-step-text strong { color: var(--white); }
+  .lm-right { display: flex; flex-direction: column; gap: 12px; }
+  .lm-pill { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 16px 18px; }
+  .lm-pill-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.4); margin-bottom: 6px; }
+  .lm-pill-val { font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.45; }
+
+  @media(max-width:1024px){
     .hero-kpis { grid-template-columns: repeat(2,1fr); }
-    .wrap { padding: 40px 20px; }
-    .obj-banner, .inv-grid, .work-grid, .harmony-grid,
-    .inf-grid, .hitos-grid, .camp-row { grid-template-columns: 1fr; }
-    .camp-amt { text-align: left; }
-    footer { flex-direction: column; gap: 8px; text-align: center; }
+    .work-grid { grid-template-columns: repeat(2,1fr); }
+    .hitos-grid { grid-template-columns: repeat(2,1fr); }
+    .camp-row { grid-template-columns: 1fr 1fr; }
+    .geo-cols { grid-template-columns: repeat(2,1fr); }
+  }
+
+  @media(max-width:768px){
+    nav { padding: 14px 16px; }
+    .nav-label { display: none; }
+    .hero { padding: 40px 16px 36px; }
+    .hero h1 { font-size: 26px; }
+    .hero-sub { font-size: 13px; }
+    .hero-kpis { grid-template-columns: repeat(2,1fr); max-width: 100%; }
+    .wrap { padding: 36px 16px; }
+    .sec-title { font-size: 20px; }
+
+    .obj-banner { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; }
+    .inv-grid { grid-template-columns: 1fr; }
+    .inv-card { padding: 18px 20px; }
+
+    .work-grid { grid-template-columns: 1fr; }
+    .lm-block { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; }
+
+    .seg-table { display: block; overflow-x: auto; font-size: 11px; }
+    .geo-cols { grid-template-columns: 1fr; }
+
+    .camp-stack .camp-row { grid-template-columns: 1fr; gap: 12px; padding: 20px 16px; }
+    .camp-amt { text-align: left; font-size: 20px; }
+
+    .harmony-grid { grid-template-columns: 1fr; }
+
+    .inf-grid { grid-template-columns: 1fr; }
+    .inf-profile { padding: 20px 16px; }
+
+    .org-table { display: block; overflow-x: auto; }
+
+    .hitos-grid { grid-template-columns: 1fr 1fr; }
+
+    footer { flex-direction: column; gap: 8px; text-align: center; padding: 20px 16px; }
+  }
+
+  @media(max-width:480px){
+    .hero h1 { font-size: 22px; }
+    .hero-kpis { grid-template-columns: 1fr 1fr; }
+    .kpi { padding: 16px; }
+    .kpi-num { font-size: 20px; }
+    .hitos-grid { grid-template-columns: 1fr; }
+    .inv-grid { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .harmony-grid { grid-template-columns: 1fr; }
+    .geo-cols { grid-template-columns: 1fr; }
+    .lm-block { padding: 20px 16px; }
+    .obj-banner { padding: 20px 16px; }
   }
 </style>
 </head>
@@ -226,7 +306,7 @@
   <p class="hero-sub">Primer mes con el sistema completo activo: conversión, awareness, programática, UGC e influencer operando en paralelo sobre una base técnica ya lista.</p>
   <div class="hero-kpis">
     <div class="kpi"><div class="kpi-num">$8K</div><div class="kpi-label">Inversión total MXN</div></div>
-    <div class="kpi"><div class="kpi-num">5</div><div class="kpi-label">Canales activos</div></div>
+    <div class="kpi"><div class="kpi-num">6</div><div class="kpi-label">Canales activos</div></div>
     <div class="kpi"><div class="kpi-num">3</div><div class="kpi-label">Campañas Meta</div></div>
     <div class="kpi"><div class="kpi-num">30</div><div class="kpi-label">Días de ejecución</div></div>
   </div>
@@ -279,7 +359,7 @@
         <div><div class="inv-obj">Presencia · audiencias frías</div><div class="inv-canal">Meta Ads · Reconocimiento</div></div>
         <div class="inv-monto">$1,000</div>
       </div>
-      <div class="inv-desc">Presencia mínima sostenida en CDMX, GDL y MTY para seguir alimentando el funnel con tráfico nuevo durante el mes.</div>
+      <div class="inv-desc">Presencia mínima sostenida en CDMX, GDL, MTY y Quintana Roo para seguir alimentando el funnel con tráfico nuevo durante el mes.</div>
     </div>
     <div class="inv-card dark">
       <div class="inv-top">
@@ -362,6 +442,14 @@
       <div class="work-item">Reporte de cierre de julio con datos limpios y atribuibles</div>
     </div>
     <div class="work-card">
+      <div class="work-icon">🤖</div>
+      <div class="work-title">Lead magnet · IA generativa</div>
+      <div class="work-item">Landing "Retrato de tu mascota" publicada antes del 15 de julio</div>
+      <div class="work-item">Flujo completo: subir foto → imagen generada → correo para descargar</div>
+      <div class="work-item">Campaña de generación de leads en Meta apuntando a la landing</div>
+      <div class="work-item">Pieza orgánica en Instagram para viralización de la herramienta</div>
+    </div>
+    <div class="work-card">
       <div class="work-icon">⚙️</div>
       <div class="work-title">Setup técnico · Semana 1</div>
       <div class="work-item">Landing publicada y checkout probado en móvil antes del 7 de julio</div>
@@ -373,6 +461,56 @@
 </div>
 
 <div class="divider"></div>
+
+
+<div class="divider"></div>
+
+<!-- LEAD MAGNET -->
+<div class="wrap">
+  <div class="eyebrow">Iniciativa digital · Lead magnet</div>
+  <div class="sec-title">Retrato de tu mascota con IA</div>
+  <div class="sec-sub">Una herramienta de captación de leads basada en inteligencia artificial generativa. Bajo costo operativo, alto potencial de viralidad orgánica.</div>
+
+  <div class="lm-block">
+    <div class="lm-left">
+      <div class="lm-eyebrow">Cómo funciona</div>
+      <div class="lm-title">El usuario sube la foto de su mascota.<br>La IA genera una imagen.</div>
+      <div class="lm-desc">Una landing dedicada donde cualquier dueño de mascota puede subir una foto y recibir una imagen estilizada generada por IA. Para descargarla, deja su correo electrónico. Simple, viral y completamente alineado con el perfil emocional del target.</div>
+      <div class="lm-steps">
+        <div class="lm-step">
+          <div class="lm-step-num">1</div>
+          <div class="lm-step-text"><strong>El usuario sube la foto</strong> de su mascota en la landing dedicada</div>
+        </div>
+        <div class="lm-step">
+          <div class="lm-step-num">2</div>
+          <div class="lm-step-text"><strong>La IA genera una imagen estilizada</strong> de la mascota en segundos</div>
+        </div>
+        <div class="lm-step">
+          <div class="lm-step-num">3</div>
+          <div class="lm-step-text"><strong>Para descargarla, deja su correo.</strong> El lead queda capturado.</div>
+        </div>
+      </div>
+    </div>
+    <div class="lm-right">
+      <div class="lm-pill">
+        <div class="lm-pill-label">Objetivo</div>
+        <div class="lm-pill-val">Captación de leads calificados — dueños de mascotas con intención activa de interacción con la marca</div>
+      </div>
+      <div class="lm-pill">
+        <div class="lm-pill-label">Cómo se promueve</div>
+        <div class="lm-pill-val">Campaña de generación de leads en Meta Ads + contenido orgánico en Instagram como pieza de viralidad potencial</div>
+      </div>
+      <div class="lm-pill">
+        <div class="lm-pill-label">Entregable del mes</div>
+        <div class="lm-pill-val">Landing con la herramienta operativa y publicada antes del 15 de julio</div>
+      </div>
+      <div class="lm-pill">
+        <div class="lm-pill-label">Por qué funciona</div>
+        <div class="lm-pill-val">El contenido personalizado de mascotas tiene altísima tasa de compartición. El usuario obtiene algo de valor inmediato — TailBadge obtiene su correo y construye una base de leads para activaciones futuras</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- CAMPAÑAS META -->
 <div class="wrap">
@@ -390,7 +528,7 @@
       <div class="spec-list">
         <div class="spec"><span class="sk">Presupuesto</span><span class="sv">$3,000 MXN · ~$100/día</span></div>
         <div class="spec"><span class="sk">Destino</span><span class="sv">Landing de conversión — no el home de Shopify</span></div>
-        <div class="spec"><span class="sk">Segmentación</span><span class="sv">CDMX, GDL, MTY · 25–44 años · Dueños de mascotas</span></div>
+        <div class="spec"><span class="sk">Segmentación</span><span class="sv">CDMX, GDL, MTY, Quintana Roo · 25–44 años · Dueños de mascotas</span></div>
         <div class="spec"><span class="sk">Creativos</span><span class="sv">Carrusel Problema→Solución→Sistema→CTA + 2 estáticas A/B</span></div>
         <div class="spec"><span class="sk">Optimización</span><span class="sv">Evento Purchase · Revisión día 7 y día 15</span></div>
       </div>
@@ -439,6 +577,122 @@
 </div>
 
 <div class="divider"></div>
+
+
+<div class="divider"></div>
+
+<!-- SEGMENTACIÓN -->
+<div class="wrap">
+  <div class="eyebrow">Segmentación de audiencias</div>
+  <div class="sec-title">A quién apuntamos y dónde</div>
+  <div class="sec-sub">Configuración operativa por canal. Meta trabaja con intereses y comportamientos declarados. Harmony Ads trabaja con geofence y behavioral targeting en zonas de alta densidad pet.</div>
+
+  <!-- META -->
+  <div class="seg-block">
+    <div class="seg-header">
+      <div>
+        <div class="seg-header-title">Meta Ads · Segmentación por campaña</div>
+        <div class="seg-header-sub">Tres audiencias diferenciadas con exclusiones cruzadas para evitar saturación</div>
+      </div>
+    </div>
+    <table class="seg-table">
+      <thead>
+        <tr><th>Campaña</th><th>Audiencia</th><th>Ubicación · Edad</th><th>Intereses y señales</th><th>Exclusiones</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Conversión<br><span style="font-weight:400;color:var(--text-soft);">Audiencia fría calificada</span></td>
+          <td>Nuevos usuarios sin contacto previo con la marca</td>
+          <td>CDMX · GDL · MTY · QROO<br>25–44 años · Todos los géneros</td>
+          <td>
+            <span class="seg-tag">Mascotas y animales</span>
+            <span class="seg-tag">Cuidado de perros</span>
+            <span class="seg-tag">Cuidado de gatos</span>
+            <span class="seg-tag">Veterinaria</span>
+            <span class="seg-tag">Compradores online activos</span>
+          </td>
+          <td>Visitantes de landing últimos 30 días</td>
+        </tr>
+        <tr>
+          <td>Remarketing<br><span style="font-weight:400;color:var(--text-soft);">Audiencia caliente de junio</span></td>
+          <td>Usuarios que ya interactuaron con TailBadge — tráfico acumulado en junio</td>
+          <td>CDMX · GDL · MTY · QROO<br>Sin restricción de edad</td>
+          <td>
+            <span class="seg-tag green">Visitantes landing 30 días</span>
+            <span class="seg-tag green">Interacciones IG 60 días</span>
+            <span class="seg-tag green">Visitantes producto sin compra</span>
+          </td>
+          <td>Compradores (excluir si ya convirtieron)</td>
+        </tr>
+        <tr>
+          <td>Reconocimiento<br><span style="font-weight:400;color:var(--text-soft);">Alcance amplio</span></td>
+          <td>Audiencias frías sin filtro de intereses para maximizar alcance</td>
+          <td>CDMX · GDL · MTY · QROO<br>25–44 años</td>
+          <td>Solo ubicación y edad — sin intereses para máximo reach</td>
+          <td>Frecuencia cap: 2 impresiones / 7 días</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- HARMONY GEOFENCE -->
+  <div class="seg-block">
+    <div class="seg-header">
+      <div>
+        <div class="seg-header-title">Harmony Ads · Geofence + Behavioral targeting</div>
+        <div class="seg-header-sub">Polígonos de alta densidad pet × usuarios con interés previo demostrado en la categoría</div>
+      </div>
+    </div>
+    <div style="padding: 20px 22px 8px;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-mid);margin-bottom:12px;">Zonas geofence prioritarias por ciudad</div>
+      <div class="geo-cols">
+        <div class="geo-col">
+          <div class="geo-col-city">Ciudad de México</div>
+          <div class="geo-col-zones">
+            <strong>Alcaldías: Benito Juárez · Cuauhtémoc · Miguel Hidalgo</strong>
+            Condesa · Roma Norte · Roma Sur · Polanco · Narvarte · Del Valle · Nápoles · Olivar de los Padres
+          </div>
+        </div>
+        <div class="geo-col">
+          <div class="geo-col-city">Guadalajara</div>
+          <div class="geo-col-zones">
+            <strong>Zonas: Zapopan · Centro GDL</strong>
+            La Estancia · Providencia · Chapultepec · Colonia Americana · Valle Real
+          </div>
+        </div>
+        <div class="geo-col">
+          <div class="geo-col-city">Monterrey</div>
+          <div class="geo-col-zones">
+            <strong>Municipios: San Pedro · Garza García</strong>
+            Cumbres · Valle Oriente · Contry · Del Valle MTY · Zona Tec
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="seg-table" style="margin-top:8px;">
+      <thead>
+        <tr><th>Capa de targeting</th><th>Descripción</th><th>Señal usada</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Behavioral</td>
+          <td>Usuarios que en los últimos 30 días visitaron sitios de mascotas, realizaron búsquedas de la categoría o interactuaron con contenido pet</td>
+          <td>Historial de navegación · cookies de categoría</td>
+        </tr>
+        <tr>
+          <td>Contextual</td>
+          <td>Anuncios mostrados dentro de portales veterinarios, blogs de cuidado de mascotas, tiendas pet online y directorios de servicios para animales</td>
+          <td>Temática del sitio en el momento de la impresión</td>
+        </tr>
+        <tr>
+          <td>Geofence</td>
+          <td>Polígonos delimitados en colonias con mayor densidad de veterinarias, parques caninos y establecimientos pet-friendly por ciudad</td>
+          <td>Ubicación GPS del dispositivo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <!-- HARMONY ADS -->
 <div class="wrap">
@@ -577,6 +831,7 @@
       <div class="hito-item">Brief Harmony Ads entregado con formatos y copys</div>
       <div class="hito-item">Acuerdo con @belatlv cerrado o descartado</div>
       <div class="hito-item">Carrusel educativo publicado en IG</div>
+      <div class="hito-item">Landing lead magnet IA en desarrollo</div>
     </div>
     <div class="hito s2">
       <div class="hito-sem">Semana 2 · Jul 8–14</div>
@@ -592,6 +847,7 @@
       <div class="hito-item">UGC aprobado → subir a Meta como creativo</div>
       <div class="hito-item">Testimonio Puerto Vallarta publicado (si hay consentimiento)</div>
       <div class="hito-item">Ajuste de segmentación y presupuesto según datos</div>
+      <div class="hito-item">Landing lead magnet publicada y activa</div>
     </div>
     <div class="hito s4">
       <div class="hito-sem">Semana 4 · Jul 22–31</div>
